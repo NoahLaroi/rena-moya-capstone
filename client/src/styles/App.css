@@ -1,0 +1,287 @@
+@font-face {
+  font-family: YellowTail;
+  src: url("../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf");
+}
+@font-face {
+  font-family: HousttelySignature-GOonZ;
+  src: url("../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
+}
+@font-face {
+  font-family: OpenSans-B9K8;
+  src: url("../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
+}
+html {
+  font-family: OpenSans-B9K8;
+  background-color: #268f86;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.App {
+  font-family: OpenSans-B9K8;
+  background-color: #268f86;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  margin: 0 16px;
+}
+
+.logo,
+.subLogo {
+  color: #e7c1ac;
+  font-family: YellowTail;
+}
+
+.logoContainer {
+  width: 100%;
+}
+
+.subLogo {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.navMenu {
+  position: fixed;
+  background-color: #572911;
+  width: 50%;
+  border-radius: 5px;
+  padding: 5px;
+}
+.navMenu .listElement {
+  list-style: none;
+  font-size: 16pt;
+  margin: 0 0 16px 8px;
+  color: #e7c1ac;
+}
+
+.navLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+.navLeft .logo {
+  font-size: 24pt;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.navRight {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navElements {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+
+.hamburger {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 30px;
+  width: 30px;
+  margin: 16px;
+}
+.hamburger span {
+  width: 80%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #e7c1ac;
+}
+
+.hero {
+  background-image: url("../../public/assets/images/serenawidesmile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100;
+  border-radius: 5px;
+  margin: 16px;
+}
+
+.landingPageContentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px;
+}
+.landingPageContentContainer .schedulerContainer {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.landingPageContentContainer .scheduler {
+  border-radius: 5px;
+  font-family: OpenSans-B9K8;
+  font-size: 16pt;
+  font-weight: 600;
+  background-color: #e7c1ac;
+  margin-right: 16px;
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.landingPageContentContainer .scheduler p {
+  margin: 8px;
+  text-align: center;
+  color: #572911;
+}
+.landingPageContentContainer .scheduler button {
+  font-family: YellowTail;
+  color: #e7c1ac;
+  background-color: #572911;
+  border-radius: 20px;
+  width: 80%;
+  border: #572911;
+  padding: 5px 8px;
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+.modelsPictureContainer {
+  height: 400px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0;
+}
+.modelsPictureContainer .picture {
+  border-radius: 5px;
+}
+.modelsPictureContainer .pictureOne {
+  background-image: url("../../public/assets/images/model1.jpg");
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 16px 0;
+}
+.modelsPictureContainer .pictureTwo {
+  background-image: url("../../public/assets/images/bothmodels.jpg");
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 16px 16px;
+}
+
+.pageFooter {
+  background-color: #e7c1ac;
+  color: #572911;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.pageFooter h2 {
+  font-family: YellowTail;
+  font-size: 2rem;
+}
+.pageFooter .hours {
+  margin: 16px;
+  width: 50%;
+}
+.pageFooter .hours .p {
+  font-weight: 400;
+}
+.pageFooter .hours .closed {
+  color: red;
+  font-weight: 700;
+}
+.pageFooter .social {
+  font-family: YellowTail;
+  width: 50%;
+  margin: 16px;
+  font-size: 18pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pageFooter .social .socialHeader {
+  margin: 0;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.pageFooter .social .instagram {
+  height: 48px;
+  color: #572911;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,183 @@
+//Color variables
+$cocoa-butter: #993905;
+$coffee: #803208;
+$espresso: #572911;
+$white: #ffff;
+$cream: #eecdbb;
+$tourquoise: #268f86;
+
+@font-face {
+  font-family: YellowTail;
+  src: url('../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf');
+}
+@font-face {
+  font-family: HousttelySignature-GOonZ;
+  src: url("../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
+}
+@font-face {
+  font-family: OpenSans-B9K8;
+  src: url("../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
+}
+html {
+  font-family: OpenSans-B9K8;
+  background-color: $tourquoise;
+  background-repeat: no-repeat; height: 100%;
+}
+.App {
+  font-family: OpenSans-B9K8;
+  // background: linear-gradient(-45deg, $cocoa-butter, $coffee, $espresso);
+  background-color: $tourquoise;
+  background-repeat: no-repeat; height: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+margin: 0 16px;
+}
+.logo,
+.subLogo {
+  color: $cream;
+  font-family: YellowTail;
+
+}
+.logoContainer {
+  width: 100%;
+}
+.subLogo {
+  margin-top: 0;
+  font-size: 18px;
+}
+nav {
+  display: flex; flex-flow: row wrap;
+}
+.navMenu {
+  position: fixed;
+  background-color: $espresso;
+  width: 50%;
+  border-radius: 8px;
+  padding: 5px;
+  .listElement {
+    list-style: none; font-size: 16pt; margin: 0 0 16px 8px; 
+    color: $cream;
+  }
+}
+.listElement:hover {
+  color: $white;
+}
+.navLeft {
+  display: flex;
+  justify-content: space-between; width: 50%;
+  .logo {
+    font-size: 24pt;
+    font-weight: 700; display: inline-block; margin-top: 8px;
+  }
+}
+.navRight {
+  width: 50%; display: flex; flex-flow: column wrap; align-items: flex-end;
+}
+.navElements {
+display: inline-flex; width: 100%;
+}
+.hamburger {
+  display: inline-flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  height: 30px;
+  width: 30px;
+  margin: 16px; 
+  span {
+    width: 80%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: $cream;
+  }
+}
+
+
+.hero {
+  background-image: url("../../public/assets/images/serenawidesmile.jpg");
+  // background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100;
+  border-radius: 8px;
+  margin: 16px;
+  box-shadow: 2px 2px 8px $espresso;
+}
+.landingPageContentContainer {
+  display: flex; margin: 16px;
+  .schedulerContainer {
+    width: 50%; display: flex; align-content: center; align-items: center;
+  }
+  .scheduler {
+    border-radius: 5px;
+    font-family: OpenSans-B9K8; font-size: 16pt;font-weight: 600;
+    background-color: $cream; margin-right: 16px ; height: 200px; width: 100%; display: flex; 
+    flex-flow: column wrap; justify-content: center; align-items: center; box-shadow: 2px 2px 8px $espresso;
+  p {
+    margin: 8px; text-align: center; color: $espresso;
+  }
+  button {
+    font-family: YellowTail; color: $cream; 
+    background-color: $espresso;
+    border-radius: 20px; width: 80%; border: $espresso; 
+    padding: 5px 8px; font-size: 14pt; 
+    font-weight: 400;
+  }
+  }
+}
+.scheduleNowButton:hover {
+  transform: scale(110%); transition-duration: 1.5s; color: $white; 
+
+}
+.scheduleNowButton:not(:hover) {
+  transform: scale(100%); transition-duration: 1.5s;
+}
+.modelsPictureContainer {
+height: 400px; width: 50%; display: flex;
+flex-flow: column nowrap; align-items: flex-end; 
+margin: 0; 
+.picture {
+border-radius: 8px; box-shadow: 2px 2px 8px $espresso;
+}
+.pictureOne {
+  background-image: url("../../public/assets/images/model1.jpg");
+  height: 200px; width: 100%; background-position:center; 
+  background-size: cover; background-repeat: no-repeat; 
+  margin: 0 0 16px 0}
+.pictureTwo {
+  background-image: url("../../public/assets/images/bothmodels.jpg");
+  height: 200px; width:100%; background-position: center; background-size: cover; background-repeat: no-repeat; 
+  margin: 0 0 16px 16px;
+}
+}
+.pageFooter { background-color: $cream; color: $espresso;
+display: flex; width: 100%;
+  h2 {
+    font-family: YellowTail; font-size: 2rem;
+  }
+  .hours {
+  margin: 16px; width: 50%;
+  .p {
+    font-weight: 400;
+  }
+  .closed {
+    color: red; font-weight: 700;
+  }
+}
+
+.social {
+    font-family: YellowTail; width: 50%; margin: 16px; font-size: 18pt;
+display: flex; flex-direction: column;  justify-content: center; align-items: center;
+.socialHeader {
+  margin: 0; display: inline-block; font-size: 1.5rem;
+}  
+.instagram {
+  height: 48px; color: $espresso;
+}
+}
+}
