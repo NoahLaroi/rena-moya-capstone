@@ -142,7 +142,7 @@ height: 400px; width: 50%; display: flex;
 flex-flow: column nowrap; align-items: flex-end; 
 margin: 0; 
 .picture {
-border-radius: 8px; box-shadow: 2px 2px 8px $espresso;
+border-radius: 8px; box-shadow: 2px 2px 8px $espresso; 
 }
 .pictureOne {
   background-image: url("../../public/assets/images/model1.jpg");

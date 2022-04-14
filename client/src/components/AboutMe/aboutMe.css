@@ -38,6 +38,7 @@
   margin: 16px 0 16px 0;
   -webkit-box-shadow: 2px 2px 8px #572911;
           box-shadow: 2px 2px 8px #572911;
+  border: solid #eecdbb 8px;
 }
 
 .pictureContainer {
