@@ -1,0 +1,46 @@
+@import url('../../styles/App.scss');
+//Color variables
+$cocoa-butter: #993905;
+$coffee: #803208;
+$espresso: #572911;
+$white: #ffff;
+$cream: #eecdbb;
+$tourquoise: #268f86;
+
+@font-face {
+  font-family: YellowTail;
+  src: url('../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf');
+}
+@font-face {
+  font-family: HousttelySignature-GOonZ;
+  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
+}
+@font-face {
+  font-family: OpenSans-B9K8;
+  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
+}
+.aboutMePage {
+display: flex; flex-flow: column wrap; padding: 16px;
+}
+.heading {
+    font-family: YellowTail; text-align: center; font-size: 32px; color: $cream;
+}
+.topPic {
+    height: 200px; width: 200px; background-position: center; background-size: cover;
+    border-radius: 50%; margin: 16px 0 16px 0; box-shadow: 2px 2px 8px $espresso;
+}
+.pictureContainer {
+display: flex; flex-flow: column wrap;
+.pic-one {
+background-image:url('../../assets/images/handonhip.jpg')   
+}
+.pic-two {
+background-image: url('../../assets/images/serenaclosedsmile.jpg'); align-self: flex-end ;
+}
+.pic-three {
+background-image: url('../../assets/images/serenasitting.jpg');
+}
+}
+.aboutMeText {
+    color: $cream; text-align: justify; font-size: 18px;
+}

@@ -1,0 +1,68 @@
+@import url("../../styles/App.scss");
+@font-face {
+  font-family: YellowTail;
+  src: url("../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf");
+}
+@font-face {
+  font-family: HousttelySignature-GOonZ;
+  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
+}
+@font-face {
+  font-family: OpenSans-B9K8;
+  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
+}
+.aboutMePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 16px;
+}
+
+.heading {
+  font-family: YellowTail;
+  text-align: center;
+  font-size: 32px;
+  color: #eecdbb;
+}
+
+.topPic {
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 16px 0 16px 0;
+  -webkit-box-shadow: 2px 2px 8px #572911;
+          box-shadow: 2px 2px 8px #572911;
+}
+
+.pictureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+.pictureContainer .pic-one {
+  background-image: url("../../assets/images/handonhip.jpg");
+}
+.pictureContainer .pic-two {
+  background-image: url("../../assets/images/serenaclosedsmile.jpg");
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.pictureContainer .pic-three {
+  background-image: url("../../assets/images/serenasitting.jpg");
+}
+
+.aboutMeText {
+  color: #eecdbb;
+  text-align: justify;
+  font-size: 18px;
+}/*# sourceMappingURL=aboutMe.css.map */
