@@ -1,6 +1,7 @@
 import React from "react";
 import Hamburger from "./Hamburger";
 import { Link } from "react-router-dom";
+import logo from '../../../assets/images/mainLogo.PNG'
 export default function Nav() {
 
   return (

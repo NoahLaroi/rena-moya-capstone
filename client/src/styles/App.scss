@@ -55,9 +55,9 @@ nav {
 .navMenu {
   position: fixed;
   background-color: $espresso;
-  width: 50%;
+  width: 45%;
   border-radius: 8px;
-  padding: 5px;
+  padding: 5px; box-shadow: 2px 2px 8px black; text-align: center;
   .listElement {
     list-style: none; font-size: 16pt; margin: 0 0 16px 8px; 
     color: $cream;
@@ -114,7 +114,7 @@ display: inline-flex; width: 100%;
     width: 50%; display: flex; align-content: center; align-items: center;
   }
   .scheduler {
-    border-radius: 5px;
+    border-radius: 8px;
     font-family: OpenSans-B9K8; font-size: 16pt;font-weight: 600;
     background-color: $cream; margin-right: 16px ; height: 200px; width: 100%; display: flex; 
     flex-flow: column wrap; justify-content: center; align-items: center; box-shadow: 2px 2px 8px $espresso;

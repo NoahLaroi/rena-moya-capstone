@@ -60,9 +60,12 @@ nav {
 .navMenu {
   position: fixed;
   background-color: #572911;
-  width: 50%;
+  width: 45%;
   border-radius: 8px;
   padding: 5px;
+  -webkit-box-shadow: 2px 2px 8px black;
+          box-shadow: 2px 2px 8px black;
+  text-align: center;
 }
 .navMenu .listElement {
   list-style: none;
@@ -164,7 +167,7 @@ nav {
           align-items: center;
 }
 .landingPageContentContainer .scheduler {
-  border-radius: 5px;
+  border-radius: 8px;
   font-family: OpenSans-B9K8;
   font-size: 16pt;
   font-weight: 600;

@@ -1,11 +1,9 @@
 import React from "react"
 import './gallery.scss'
-import handOnHip from '../../assets/images/handonhip.jpg'
-import closedSmile from '../../assets/images/serenaclosedsmile.jpg'
-import sittingDown from '../../assets/images/serenasitting.jpg'
 export default function Gallery () {
     return (
         <section className='gallery'>
+
          <blockquote
   className="instagram-media"
   data-instgrm-permalink="https://www.instagram.com/renamoyahairstudio/?utm_source=ig_embed&utm_campaign=loading"
@@ -13,13 +11,13 @@ export default function Gallery () {
   style={{
     background: "#FFF",
     border: 0,
-    borderRadius: 3,
+    borderRadius: 8,
     boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
-    margin: 1,
+    margin: 16,
     maxWidth: 540,
     minWidth: 326,
     padding: 0,
-    width: "calc(100% - 2px)"
+    width: 350
   }}
 >
   <div style={{ padding: 16 }}>

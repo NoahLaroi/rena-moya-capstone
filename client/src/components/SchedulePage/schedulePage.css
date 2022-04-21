@@ -1,0 +1,93 @@
+@font-face {
+  font-family: YellowTail;
+  src: url("../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf");
+}
+@font-face {
+  font-family: HousttelySignature-GOonZ;
+  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
+}
+@font-face {
+  font-family: OpenSans-B9K8;
+  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
+}
+.schedulePage {
+  background-color: #572911;
+  margin: 16px;
+  border-radius: 8px;
+  padding: 16px 0;
+}
+
+.scheduleForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.header {
+  font-family: YellowTail;
+  text-align: center;
+  font-size: 32px;
+  color: #eecdbb;
+}
+
+label {
+  color: #eecdbb;
+  margin: 16px 0 8px 16px;
+}
+
+.textInput, select {
+  height: 32px;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0 16px;
+  border: 1px #572911;
+  font-family: OpenSans-B9K8;
+}
+
+.description {
+  height: 100px;
+  resize: none;
+  padding: 8px;
+}
+
+.buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submitButton {
+  font-family: YellowTail;
+  color: #eecdbb;
+  border: solid 1px #268f86;
+  background-color: #268f86;
+  margin: 16px;
+  height: 32px;
+  border-radius: 8px;
+  width: 25%;
+  font-size: 16pt;
+  font-weight: 600;
+  text-align: center;
+}
+
+select option {
+  position: relative;
+  background-color: white;
+  border: solid grey 1px;
+  width: 120px;
+  height: 18px;
+}/*# sourceMappingURL=schedulePage.css.map */
