@@ -31,16 +31,16 @@ function writeApppointment(data) {
       if (err) throw err;
     };
   }
-  console.log(timeSlots)
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
   })
 app.get ('/', function (req, res) {
-  res.send(appointmentData)
+  res.send('Welcome to Rena Moya"s Server!')
 }
 )
-app.get('/timeslots', function (req, res) {
-  res.send(timeSlots)
+app.get('/appointments', function (req, res) {
+  res.send(appointmentData)
 })
 // router
 // .route ('/')
@@ -48,7 +48,8 @@ app.get('/timeslots', function (req, res) {
 // let appointmentData = writeApppointment();
 // res.status(200).send(appointmentData);
 // })
-app.post('/', function (req, res) {
+
+app.post('/appointments', function (req, res) {
   console.log(req.body);
   const { name, phone, date, time, description} = req.body;
   const newAppointment = {
@@ -61,8 +62,5 @@ app.post('/', function (req, res) {
   };
   console.log(appointmentData);
   const updatedAppointmentData = [...appointmentData, newAppointment];
-writeApppointment(updatedAppointmentData);
-})
-app.use(function (req,res,next){
-	res.status(404).send('Unable to find the requested resource!');
+  writeApppointment(updatedAppointmentData);
 });

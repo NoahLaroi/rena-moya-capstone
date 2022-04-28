@@ -15,7 +15,9 @@ export default class Hamburger extends Component {
         <ul className="navMenu" name='navMenu'>
           <Link to='/aboutme'><li className="listElement about">About Me</li></Link>
           <Link to='/gallery'><li className="listElement gallery">Gallery</li></Link>
+          <Link to='/policies'><li className='listElement policies'> Policies</li></Link>
           <Link to='/schedule'><li className="listElement schedule">Schedule</li></Link>
+          <Link to='/admin-login'><li className='listElement adminLogin'>Admin Login</li></Link>
         </ul>
       </div>;
     

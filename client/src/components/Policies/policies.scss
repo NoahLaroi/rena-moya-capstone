@@ -1,0 +1,40 @@
+@import url('../../styles/App.scss');
+//Color variables
+$cocoa-butter: #993905;
+$coffee: #803208;
+$espresso: #572911;
+$white: #ffff;
+$cream: #eecdbb;
+$tourquoise: #268f86;
+
+@font-face {
+  font-family: YellowTail;
+  src: url('../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf');
+}
+@font-face {
+  font-family: HousttelySignature-GOonZ;
+  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
+}
+@font-face {
+  font-family: OpenSans-B9K8;
+  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
+}
+.policiesSection {
+    display: flex; flex-flow: column wrap; margin: 16px; align-items: center; text-align: center;
+    color: $espresso; border: solid 5px $espresso; padding: 8px; background-color: $white;
+    border-radius: 8px;
+h1 {
+text-decoration: underline;
+    }
+h3 {
+    text-decoration: underline;
+}
+a {
+    color: $tourquoise;
+}
+}
+.policyLogoContainer {
+    display: flex; justify-content: center; align-items: center; height: 250px; width: 100%;
+    background-image: url('../../assets/images/mainLogo.PNG'); background-position: center; background-repeat: 
+    no-repeat; background-size: cover;
+    }

@@ -11,17 +11,23 @@
   src: url("../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
 }
 html {
-  font-family: OpenSans-B9K8;
-  background-color: #268f86;
+  background-color: #144945;
   background-repeat: no-repeat;
   height: 100%;
 }
 
 .App {
   font-family: OpenSans-B9K8;
-  background-color: #268f86;
+  background-color: #144945;
   background-repeat: no-repeat;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 a {
@@ -35,11 +41,12 @@ a {
 .logo,
 .subLogo {
   color: #eecdbb;
-  font-family: YellowTail;
+  text-align: left;
 }
 
 .logoContainer {
   width: 100%;
+  text-align: left;
 }
 
 .subLogo {
@@ -65,6 +72,7 @@ nav {
   padding: 5px;
   -webkit-box-shadow: 2px 2px 8px black;
           box-shadow: 2px 2px 8px black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
 }
 .navMenu .listElement {
@@ -89,9 +97,11 @@ nav {
 }
 .navLeft .logo {
   font-size: 24pt;
+  width: 200px;
   font-weight: 700;
   display: inline-block;
-  margin-top: 8px;
+  margin: 16px 0 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .navRight {
@@ -127,7 +137,7 @@ nav {
       justify-content: space-around;
   height: 30px;
   width: 30px;
-  margin: 16px;
+  margin: 16px 0 16px 16px;
 }
 .hamburger span {
   width: 80%;
@@ -136,24 +146,31 @@ nav {
   background-color: #eecdbb;
 }
 
+.hamburger:hover {
+  cursor: pointer;
+}
+
 .hero {
   background-image: url("../../public/assets/images/serenawidesmile.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 350px;
-  width: 100;
+  width: 100%;
   border-radius: 8px;
-  margin: 16px;
+  margin: 16px 0;
   -webkit-box-shadow: 2px 2px 8px #572911;
           box-shadow: 2px 2px 8px #572911;
+}
+
+.landingPage {
+  margin: 0 16px;
 }
 
 .landingPageContentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 16px;
 }
 .landingPageContentContainer .schedulerContainer {
   width: 50%;
@@ -165,6 +182,10 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 16px;
 }
 .landingPageContentContainer .scheduler {
   border-radius: 8px;
@@ -172,7 +193,6 @@ nav {
   font-size: 16pt;
   font-weight: 600;
   background-color: #eecdbb;
-  margin-right: 16px;
   height: 200px;
   width: 100%;
   display: -webkit-box;
@@ -196,8 +216,16 @@ nav {
   text-align: center;
   color: #572911;
 }
+.landingPageContentContainer .scheduler a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .landingPageContentContainer .scheduler button {
-  font-family: YellowTail;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #eecdbb;
   background-color: #572911;
   border-radius: 20px;
@@ -259,34 +287,38 @@ nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 0 16px 16px;
+  margin: 0 0 16px 0;
 }
 
 .pageFooter {
   background-color: #eecdbb;
   color: #572911;
+  height: 350px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 .pageFooter h2 {
-  font-family: YellowTail;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
+  margin: 16px 0;
+  font-weight: 600;
 }
-.pageFooter .hours {
+.pageFooter .footerInfo {
   margin: 16px;
   width: 50%;
 }
-.pageFooter .hours .p {
+.pageFooter .footerInfo .p {
   font-weight: 400;
 }
-.pageFooter .hours .closed {
+.pageFooter .footerInfo .closed {
   color: red;
   font-weight: 700;
 }
 .pageFooter .social {
-  font-family: YellowTail;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 50%;
   margin: 16px;
   font-size: 18pt;
@@ -297,19 +329,119 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.pageFooter .social .socialHeader {
-  margin: 0;
-  display: inline-block;
-  font-size: 1.5rem;
-}
 .pageFooter .social .instagram {
   height: 48px;
   color: #572911;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-left: 24px;
+  }
+
+  .logoContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
+  }
+
+  .landingPage {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    margin: 24px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+
+  .landingPageContentContainer {
+    width: 75%;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landingPageContentContainer .schedulerContainer {
+    width: 180px;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-image: url("../assets/images/serenasitting.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    margin-right: 16px;
+    border-radius: 8px;
+  }
+  .landingPageContentContainer .schedulerContainer .scheduler {
+    height: 25%;
+    width: 80%;
+    font-size: 16px;
+    margin: 16px;
+  }
+  .landingPageContentContainer .schedulerContainer .scheduler a {
+    width: 100%;
+    height: 32px;
+  }
+  .landingPageContentContainer .schedulerContainer .scheduler .scheduleNowButton {
+    height: 80%;
+    font-size: 13px;
+  }
+  .landingPageContentContainer .modelsPictureContainer {
+    width: 66%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .landingPageContentContainer .modelsPictureContainer .picture {
+    margin: 0;
+    height: 400px;
+    width: 180px;
+  }
+  .landingPageContentContainer .modelsPictureContainer .pictureOne {
+    margin: 0 16px 0 0;
+  }
+  .landingPageContentContainer .modelsPictureContainer .pictureTwo {
+    margin-right: 32px;
+  }
+
+  .hero {
+    width: 275px;
+    height: 400px;
+    width: 180px;
+    margin: 0 16px 0 32px;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -8,8 +8,8 @@ export default function Nav() {
     <nav>
       <div className="navLeft">
         <div className="logoContainer">
-          <Link to='/'><h1 className="logo">Rena Moya</h1></Link>
-          {/* <h2 className="subLogo">Hair Studio</h2> */}
+          <Link to='/'><h1 className="logo">RENA MOYA</h1></Link>
+          <h4 className='subLogo'>HAIR STUDIO</h4>
         </div>
       </div>
       <div className='navRight'>
