@@ -55,7 +55,7 @@ app.post('/appointments', function (req, res) {
   const newAppointment = {
     id: uuidv4(),
     name: name,
-    phome: phone,
+    phone: phone,
     date: date,
     time: time,
     description: description,
