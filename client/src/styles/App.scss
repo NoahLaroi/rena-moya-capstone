@@ -23,7 +23,7 @@ $desktop: 1280px;
 }
 html {
   background-color: $tourquoise;
-  background-repeat: no-repeat; height: 100%;
+  background-repeat: no-repeat; height: 100%; margin: 0; padding: 0;
 }
 .App {
   font-family: OpenSans-B9K8;
@@ -156,17 +156,14 @@ height: 400px; width: 50%; display: flex;
 flex-flow: column nowrap; align-items: flex-end; 
 margin: 0; 
 .picture {
-border-radius: 8px; box-shadow: 2px 2px 8px $espresso; 
+border-radius: 8px; box-shadow: 2px 2px 8px $espresso; height: 200px; width: 100%; background-position: center; 
+background-size: cover; background-repeat: no-repeat; margin: 0 0 16px 0;
 }
 .pictureOne {
   background-image: url("../../public/assets/images/model1.jpg");
-  height: 200px; width: 100%; background-position:center; 
-  background-size: cover; background-repeat: no-repeat; 
-  margin: 0 0 16px 0}
+}
 .pictureTwo {
   background-image: url("../../public/assets/images/bothmodels.jpg");
-  height: 200px; width:100%; background-position: center; background-size: cover; background-repeat: no-repeat; 
-  margin: 0 0 16px 0;
 }
 }
 .pageFooter { background-color: $cream; color: $espresso; 

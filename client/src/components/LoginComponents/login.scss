@@ -39,11 +39,14 @@ margin: 0 16px 0 16px;
 }
 //Appointment Page Styles
 .appointmentsSection {
-    margin: 16px;
+    margin: 16px; display: flex; flex-flow: column wrap;
+}
+.appointmentHeading {
+font-size: 24pt; color: $white;
 }
 .appointmentContainer {
-    background-color: $white; width: 45%; border-radius: 8px; display: inline-flex; 
-    flex-flow: column wrap; box-shadow: 2px 2px 8px $espresso; font-size: 16pt;
+    background-color: $white; width: 100%; border-radius: 8px; display: inline-flex; 
+    flex-flow: column wrap; box-shadow: 2px 2px 8px black; font-size: 16pt; margin: 2rem 0;
     label {
         color: black;
     }
@@ -51,8 +54,8 @@ margin: 0 16px 0 16px;
         color: $tourquoise; padding-left: 16px; margin: 0;
     }
     .cancelButton {
-        background-color: $tourquoise; height: 32px; color: $white; border-radius: 8px; border: solid $tourquoise 1px; width: 50%; 
-        align-self: center; margin: 16px;
+        background-color: $tourquoise; height: 40px; color: $white; border-radius: 8px; border: solid $tourquoise 1px; width: 50%; 
+        align-self: center; margin: 16px; text-align: center; font-size: 16pt;
     }
     .cancelButton:hover {
         background-color: $dark-tourquoise; color: $cream; border-color: $dark-tourquoise;

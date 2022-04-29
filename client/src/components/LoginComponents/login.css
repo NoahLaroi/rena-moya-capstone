@@ -55,11 +55,23 @@
 
 .appointmentsSection {
   margin: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.appointmentHeading {
+  font-size: 24pt;
+  color: white;
 }
 
 .appointmentContainer {
   background-color: white;
-  width: 45%;
+  width: 100%;
   border-radius: 8px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -68,9 +80,10 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -webkit-box-shadow: 2px 2px 8px #572911;
-          box-shadow: 2px 2px 8px #572911;
+  -webkit-box-shadow: 2px 2px 8px black;
+          box-shadow: 2px 2px 8px black;
   font-size: 16pt;
+  margin: 2rem 0;
 }
 .appointmentContainer label {
   color: black;
@@ -82,7 +95,7 @@
 }
 .appointmentContainer .cancelButton {
   background-color: #268f86;
-  height: 32px;
+  height: 40px;
   color: white;
   border-radius: 8px;
   border: solid #268f86 1px;
@@ -90,6 +103,8 @@
   -ms-flex-item-align: center;
       align-self: center;
   margin: 16px;
+  text-align: center;
+  font-size: 16pt;
 }
 .appointmentContainer .cancelButton:hover {
   background-color: #144e49;

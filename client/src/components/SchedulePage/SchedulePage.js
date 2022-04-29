@@ -89,9 +89,9 @@ export default class SchedulePage extends Component {
         return response.JSON()
       }) 
       .catch(function (error) {
-        // console.log(error);
+        console.log(error);
       });
-      // setTimeout ( ()=> window.location.replace("/"), 2000);
+      setTimeout ( ()=> window.location.replace("/"), 2000);
     }
 
     
@@ -99,7 +99,7 @@ export default class SchedulePage extends Component {
   
     render() {
       const {name, phone, date, time, description, errors} = this.state
-      console.log(this.state.time)
+      console.log(this.state.date);
         return (
             <section className='schedulePage'>
                 <section className='scheduleSection'>

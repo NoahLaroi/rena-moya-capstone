@@ -32,6 +32,7 @@ background-color: $espresso; margin: 16px; border-radius: 8px; padding: 16px 0;
 label {
     color: $cream; margin: 16px 0 8px 16px;
 }
+
 .textInput, select {
     height: 32px; padding: 5px; border-radius: 20px; margin: 0 16px; border: 1px $espresso;
   font-family: OpenSans-B9K8; 
@@ -54,4 +55,5 @@ label {
     margin: 16px; height: 32px; border-radius: 8px; width: 25%; font-size: 12pt; font-weight: 600; text-align: center;
 }
 select option {position:relative; background-color:white; border:solid grey 1px;  width:120px; height:18px;}
+
 
