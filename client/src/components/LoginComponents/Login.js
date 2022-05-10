@@ -3,7 +3,7 @@ import axios from 'axios'
 import './login.scss'
 export default class Login extends Component {
     state = {
-        password: '',
+        superSuperSecret: 'tsa%A6@-hU',
         isLoggedIn: false,
         isLoginError: false,
         errorMessage: "",
@@ -11,15 +11,15 @@ export default class Login extends Component {
     componentDidMount() {
         axios.get('http://localhost:8080/')
         .then(function (response) {
-          console.log(response);
+        //   console.log(response);
         })
         .catch(function (error) {
-          console.log(error);
+        //   console.log(error);
         });
     }
     sumbitHandler=(event)=> {
     event.preventDefault();
-    if (this.state.password === '123456') {
+    if (this.state.password === this.state.superSuperSecret) {
         window.location.replace('/appointment-page'); 
         alert('Welcome Serena! Here are your appointments for today');
 
@@ -31,7 +31,7 @@ export default class Login extends Component {
        
     }
     render() {
-    console.log(this.state.password)
+    // console.log(this.state.password)
         return (
             <section className='loginSection'>
             <h1>Log In</h1>

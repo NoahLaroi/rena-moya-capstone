@@ -1,6 +1,7 @@
 @import url('../../styles/App.scss');
 
-.gallery {
+.gallerySection {
     display: flex; flex-flow: column wrap; align-items: center; 
-    align-content: center;
-}
+    align-content: center; height: 800px; margin: 16px;
+
+} 

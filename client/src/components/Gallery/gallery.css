@@ -1,5 +1,5 @@
 @import url("../../styles/App.scss");
-.gallery {
+.gallerySection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,4 +12,6 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  height: 800px;
+  margin: 16px;
 }/*# sourceMappingURL=gallery.css.map */

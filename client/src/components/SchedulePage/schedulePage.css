@@ -1,17 +1,4 @@
-@font-face {
-  font-family: YellowTail;
-  src: url("../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf");
-}
-@font-face {
-  font-family: HousttelySignature-GOonZ;
-  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
-}
-@font-face {
-  font-family: OpenSans-B9K8;
-  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
-}
 .schedulePage {
-  background-color: #572911;
   margin: 16px;
   border-radius: 8px;
   padding: 16px 0;
@@ -35,18 +22,75 @@
   font-weight: 600;
 }
 
+.scheduleDate {
+  color: #eecdbb;
+  text-align: center;
+  font-size: 14pt;
+}
+
 label {
   color: #eecdbb;
   margin: 16px 0 8px 16px;
 }
 
+.selectedTime {
+  background-color: white;
+  height: 32px;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 0 16px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.selectedTime p {
+  margin: 8px;
+  width: 90%;
+}
+
+.timesList {
+  background-color: #572911;
+  margin: 16px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  -webkit-box-shadow: 2px 2px 8px black;
+          box-shadow: 2px 2px 8px black;
+}
+.timesList li {
+  list-style: none;
+  color: white;
+  border: solid white 1px;
+  padding: 8px;
+  background-color: #268f86;
+}
+.timesList li:hover {
+  background-color: #144e49;
+}
+
+.caret {
+  height: 24px;
+  width: 24px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+}
+
 .textInput, select {
   height: 32px;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 8px;
   margin: 0 16px;
   border: 1px #572911;
-  font-family: OpenSans-B9K8;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .description {
@@ -88,17 +132,22 @@ label {
 }
 
 .submitButton {
-  font-family: OpenSans-B9K8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #eecdbb;
   border: solid 1px #268f86;
   background-color: #268f86;
   margin: 16px;
   height: 32px;
-  border-radius: 8px;
-  width: 25%;
+  border-radius: 20px;
+  width: 75%;
   font-size: 12pt;
   font-weight: 600;
   text-align: center;
+}
+
+.submitButton:hover {
+  background-color: #144e49;
+  border-color: #144e49;
 }
 
 select option {

@@ -1,6 +1,8 @@
 import './aboutMe.scss'
+import { Component } from 'react'
 import PictureContainer from './PictureContainer'
-export default function AboutMe () {
+export default class AboutMe extends Component {
+    render () {
     return (
         <section className='aboutMePage'>
             <PictureContainer/>
@@ -16,4 +18,5 @@ export default function AboutMe () {
       </section>
         </section>
     )
+    }
 }

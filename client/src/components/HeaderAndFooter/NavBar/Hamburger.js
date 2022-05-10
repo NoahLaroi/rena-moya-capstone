@@ -13,11 +13,11 @@ export default class Hamburger extends Component {
     const navElements = 
     <div className="navElements">
         <ul className="navMenu" name='navMenu'>
-          <Link to='/aboutme'><li className="listElement about">About Me</li></Link>
-          <Link to='/gallery'><li className="listElement gallery">Gallery</li></Link>
-          <Link to='/policies'><li className='listElement policies'> Policies</li></Link>
-          <Link to='/schedule'><li className="listElement schedule">Schedule</li></Link>
-          <Link to='/admin-login'><li className='listElement adminLogin'>Admin Login</li></Link>
+          <Link to='/aboutme' onClick={()=> {this.setState({invisible: true})}}><li className="listElement about">About Me</li></Link>
+          <a href='https://www.instagram.com/renamoyahairstudio/' onClick={()=> {this.setState({invisible: true})}}><li className="listElement gallery">Gallery</li></a>
+          <Link to='/policies' onClick={()=> {this.setState({invisible: true})}}><li className='listElement policies'> Policies</li></Link>
+          <Link to='/schedule' onClick={()=> {this.setState({invisible: true})}}><li className="listElement schedule">Schedule</li></Link>
+          <Link to='/admin-login' onClick={()=> {this.setState({invisible: true})}}><li className='listElement adminLogin'>Admin Login</li></Link>
         </ul>
       </div>;
     

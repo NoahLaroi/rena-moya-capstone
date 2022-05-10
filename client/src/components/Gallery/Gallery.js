@@ -2,7 +2,7 @@ import React from "react"
 import './gallery.scss'
 export default function Gallery () {
     return (
-        <section className='gallery'>
+        <section className='gallerySection'>
 
          <blockquote
   className="instagram-media"
@@ -14,10 +14,8 @@ export default function Gallery () {
     borderRadius: 8,
     boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
     margin: 16,
-    maxWidth: 540,
-    minWidth: 326,
+
     padding: 0,
-    width: 350
   }}
 >
   <div style={{ padding: 16 }}>

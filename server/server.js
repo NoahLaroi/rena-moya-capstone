@@ -41,13 +41,11 @@ app.get ('/', function (req, res) {
 )
 app.get('/appointments', function (req, res) {
   res.send(appointmentData)
-})
-// router
-// .route ('/')
-// .get((req, res)=> {
-// let appointmentData = writeApppointment();
-// res.status(200).send(appointmentData);
-// })
+});
+
+app.get('/timeSlots', function (req, res) {
+  res.send(timeSlots)
+});
 
 app.post('/appointments', function (req, res) {
   console.log(req.body);
@@ -64,3 +62,43 @@ app.post('/appointments', function (req, res) {
   const updatedAppointmentData = [...appointmentData, newAppointment];
   writeApppointment(updatedAppointmentData);
 });
+app.delete('/appointments/:id', function (req, res) {
+  res.send('This is the endpoint for deleting appointments')
+  const appointments = readAppointments();
+  const { id } = req.params;
+  const newAppointments = appointments.filter((appointment) => {
+    return appointment.id !== id;
+  })
+  writeApppointment(newAppointments);
+  console.log(newAppointments)
+});
+  // [
+  //   {
+  //     "timeSlot": "9:00AM",
+  //     "available": true
+  //   },
+  //   {
+  //     "timeSlot": "10:00AM",
+  //     "available": true
+  //   },
+  //   {
+  //     "timeSlot": "11:00AM",
+  //     "available": true
+  //   },
+  //   {
+  //     "timeSlot": "1:00AM",
+  //     "available": true
+  //   },
+  //   {
+  //     "timeSlot": "2:00AM",
+  //     "available": true
+  //   },
+  //   {
+  //     "timeSlot": "3:00AM",
+  //     "available": true
+  //   },
+  //   {
+  //     "timeSlot": "4:00AM",
+  //     "available": true
+  //   }
+  // ]

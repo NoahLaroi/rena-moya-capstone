@@ -1,16 +1,4 @@
 @import url("../../styles/App.scss");
-@font-face {
-  font-family: YellowTail;
-  src: url("../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf");
-}
-@font-face {
-  font-family: HousttelySignature-GOonZ;
-  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
-}
-@font-face {
-  font-family: OpenSans-B9K8;
-  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
-}
 .aboutMePage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,6 +52,6 @@
 
 .aboutMeText {
   color: #eecdbb;
-  text-align: justify;
+  text-align: left;
   font-size: 18px;
 }/*# sourceMappingURL=aboutMe.css.map */

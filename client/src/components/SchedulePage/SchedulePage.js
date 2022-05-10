@@ -1,8 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import './schedulePage.scss'
-const URL = 'http://localhost:8080/appointments'
-
+import caret from '../../assets/images/caret-down-512.webp'
 export default class SchedulePage extends Component {
     state = {
     name: '',
@@ -10,31 +9,35 @@ export default class SchedulePage extends Component {
     date: '',
     time: '',
     description: '',
-    availableTimes: [
-      '9:00AM',
-      '10:00AM',
-      '11:00AM',
-      '1:00PM',
-      '2:00PM',
-      '3:00PM',
-      '4:00PM'
-    ],
-    errors: {}
-    }
-    componentDidMount() {
-        axios.get(URL)
-        .then(function (response) {
-          console.log(response.data[0]);
-          // this.setState({
-          //   name: response.data.name[0] 
-          // })
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    }
-    sendAMessage =()=> {
+    timeSlots: [  
       
+    ],
+    invisible: true,
+    makeTimesVisible: () => {
+        this.setState({invisible: !this.state.invisible})
+      },
+    errors: {},
+    currentDate: new Date().toLocaleDateString()
+    }
+
+    componentDidMount () {
+     this.getTimeSlots()
+     console.log('mounted')
+     this.setState({description: 'hello'})
+    }
+    getTimeSlots =()=> {
+      const timesURL = 'http://localhost:8080/timeSlots'
+      axios.get(timesURL)
+      .then( (response)=> {
+        let times = response.data
+        console.log(response);
+        this.setState({
+          timeSlots: times
+        })
+      })
+      .catch(function (error) {
+        // console.log(error);
+      });
     }
     formValidation =()=> {
       const {name, phone, date, time, description} = this.state;
@@ -78,7 +81,7 @@ export default class SchedulePage extends Component {
           () => alert(`Thank you ${this.state.name}! Your appointment has been scheduled for ${this.state.date} at ${this.state.time}!`),
           500
         );
-        axios.post( URL, {
+        axios.post('http://localhost:8080/appointments', {
         name: this.state.name,
         phone: this.state.phone,
         date: this.state.date,
@@ -99,11 +102,22 @@ export default class SchedulePage extends Component {
   
     render() {
       const {name, phone, date, time, description, errors} = this.state
-      console.log(this.state.date);
+      
+      console.log(this.state.timeSlots)
+      const timesList = <ul className='timesList'>
+      {this.state.timeSlots.map((time)=> {
+      return <li  onClick={(event)=>{
+        console.log(event.target.innerHTML)
+        this.setState({time: event.target.innerHTML})
+        }} value={time}>{time}</li>
+    })}
+    </ul>
+    console.log(this.state.time)
         return (
             <section className='schedulePage'>
                 <section className='scheduleSection'>
                 <h1 className='header'> Schedule</h1>
+                <h2 className='scheduleDate'>Today is: {this.state.currentDate}</h2>
                 <form className='scheduleForm'>
                     <label>Name</label>
                     <input className='textInput nameInput' name= 'name' type='text' placeholder='What is your name?'
@@ -124,14 +138,12 @@ export default class SchedulePage extends Component {
                     }}  
                     />
                     <label>Time</label>
-                    {/* this.state.time.map will throw an error; time is not an array */}
-                    <select className='textInput timeInput' name='time'
-                      onChange={(event)=>{this.setState({time: event.target.value})}}
-                      >
-                        {this.state.availableTimes.map((time)=> {
-                        return <option value={time}>{time}</option>
-                      })};
-                    </select>
+                    <span className='selectedTime' name='time'onClick={()=>this.state.makeTimesVisible()}>
+                      <p>{this.state.time}</p>
+                      <img  className='caret' src={caret}/>
+                    </span>
+                    {/* Times List */}
+                    {!this.state.invisible ? timesList : null}
                     <label>Description</label>
                     <textarea type='text' className= 'textInput description' placeholder='What do you want done?'
                      onChange={(event) => {
@@ -141,6 +153,7 @@ export default class SchedulePage extends Component {
                     <div className='buttonContainer'>
                     <button className ='submitButton'type='submit' onClick={this.submitAppointment}>Submit</button>
                     </div>
+                    
                 </form>
                 {Object.keys(errors).map((key)=> {
                       return <div  className = 'errorBox'>

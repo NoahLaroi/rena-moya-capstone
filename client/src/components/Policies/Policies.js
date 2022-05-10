@@ -1,5 +1,5 @@
 import './policies.scss'
-import logo from '../../assets/images/mainLogo.svg'
+import logo from '../../assets/images/mainLogo.PNG'
 import { Link } from 'react-router-dom'
 export default function Policies () {
     return (
@@ -45,13 +45,14 @@ export default function Policies () {
             or text (754) 308-9189 with your preferred style and date/time. I will get back with you as soon as
             possible.</li>
             <p>
-             Located in Coral Springs, FL.
+             <b>Located in Coral Springs, FL.
              FULL ADDRESS WILL BE PROVIDED ONCE YOUR APPOINTMENT IS BOOKED. IF YOU HAVE ANY
-             QUESTIONS, PLEASE TEXT (754) 308-9189   
+             QUESTIONS, PLEASE TEXT (754) 308-9189
+             </b>   
             </p>
             </div>
             <div className='policyLogoContainer'>
-            {/* <img href={logo}/> */}
+            <img href={logo}/>
             </div>
         </section>
     )

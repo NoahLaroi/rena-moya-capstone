@@ -7,18 +7,6 @@ $white: #ffff;
 $cream: #eecdbb;
 $tourquoise: #268f86;
 
-@font-face {
-  font-family: YellowTail;
-  src: url('../../../public/assets/font/Yellowtail/Yellowtail-Regular.ttf');
-}
-@font-face {
-  font-family: HousttelySignature-GOonZ;
-  src: url("../../../public/assets/font/housttely-signature-font/HousttelySignature-GOonZ.ttf");
-}
-@font-face {
-  font-family: OpenSans-B9K8;
-  src: url("../../../public/assets/font/open-sans-font/OpenSans-B9K8.ttf");
-}
 .aboutMePage {
 display: flex; flex-flow: column wrap; padding: 16px;
 }
@@ -42,5 +30,5 @@ background-image: url('../../assets/images/serenasitting.jpg');
 }
 }
 .aboutMeText {
-    color: $cream; text-align: justify; font-size: 18px;
+    color: $cream; text-align: left; font-size: 18px;
 }
