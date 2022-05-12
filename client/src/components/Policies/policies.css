@@ -27,16 +27,27 @@
   color: #268f86;
 }
 
-.policyLogoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 250px;
-  width: 100%;
+@media (min-width: 1280px) {
+  .policiesSection {
+    margin: 60px;
+    padding: 32px;
+  }
+  .policiesSection h1 {
+    font-size: 2.5rem;
+  }
+  .policiesSection h4 {
+    font-size: 2rem;
+  }
+  .policiesSection .policyContainer {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+  }
+  .policiesSection .policyContainer h3 {
+    font-size: 2rem;
+  }
+  .policiesSection .policyContainer p, .policiesSection .policyContainer ul, .policiesSection .policyContainer li {
+    text-align: left;
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=policies.css.map */

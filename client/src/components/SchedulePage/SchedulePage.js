@@ -119,6 +119,7 @@ export default class SchedulePage extends Component {
                 <h1 className='header'> Schedule</h1>
                 <h2 className='scheduleDate'>Today is: {this.state.currentDate}</h2>
                 <form className='scheduleForm'>
+                <div className='scheduleDivider'>
                     <label>Name</label>
                     <input className='textInput nameInput' name= 'name' type='text' placeholder='What is your name?'
                       onChange={(event) => {
@@ -137,6 +138,8 @@ export default class SchedulePage extends Component {
                       this.setState({date: event.target.value});
                     }}  
                     />
+                  </div>
+                  <div className='scheduleDivider'>
                     <label>Time</label>
                     <span className='selectedTime' name='time'onClick={()=>this.state.makeTimesVisible()}>
                       <p>{this.state.time}</p>
@@ -153,7 +156,7 @@ export default class SchedulePage extends Component {
                     <div className='buttonContainer'>
                     <button className ='submitButton'type='submit' onClick={this.submitAppointment}>Submit</button>
                     </div>
-                    
+                  </div>  
                 </form>
                 {Object.keys(errors).map((key)=> {
                       return <div  className = 'errorBox'>

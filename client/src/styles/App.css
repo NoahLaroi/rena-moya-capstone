@@ -323,7 +323,19 @@ nav {
   color: #572911;
 }
 
+.navOptions {
+  display: none;
+}
+
 @media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .hero {
+    display: none;
+  }
+
   .header {
     margin-left: 24px;
   }
@@ -340,6 +352,14 @@ nav {
         -ms-flex-align: start;
             align-items: flex-start;
     margin: 0;
+  }
+
+  .landingPageContentContainer {
+    display: none;
+  }
+
+  .hero {
+    display: none;
   }
 
   .landingPage {
@@ -359,74 +379,230 @@ nav {
             align-items: center;
     width: 100%;
   }
-
-  .landingPageContentContainer {
-    width: 75%;
-    margin: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .landingPage .landingPageContentContainer {
+    display: none;
   }
-  .landingPageContentContainer .schedulerContainer {
-    width: 180px;
-    margin: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    background-image: url("../assets/images/serenasitting.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    margin-right: 16px;
+  .landingPage div {
+    height: 500px;
+    width: 30%;
+    margin: 1rem;
     border-radius: 8px;
   }
-  .landingPageContentContainer .schedulerContainer .scheduler {
-    height: 25%;
+  .landingPage .bigHero {
+    background-image: url("../assets/images/serenawidesmile.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .landingPage .bigSchedulerContainer {
+    background-image: url("../assets/images/serenasitting.jpg");
+    background-position: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .landingPage .bigSchedulerContainer .bigScheduler {
+    background-color: #eecdbb;
+    height: 100px;
+    width: 120px;
+    margin: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 2px 2px #572911;
+            box-shadow: 2px 2px 2px 2px #572911;
+  }
+  .landingPage .bigSchedulerContainer .bigScheduler p {
+    display: inline-block;
+    font-size: 1rem;
+    color: #572911;
+    font-weight: 600;
+    margin: 0;
+  }
+  .landingPage .bigSchedulerContainer .bigScheduler button {
+    height: 40px;
+    margin: 8px;
+    background: #572911;
+    border-radius: 20px;
+    color: #eecdbb;
     width: 80%;
-    font-size: 16px;
-    margin: 16px;
+    font-size: 0.75rem;
+    border: 1px solid #572911;
   }
-  .landingPageContentContainer .schedulerContainer .scheduler a {
+  .landingPage .bigPictureOne {
+    background-image: url("../assets/images/model1.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .landingPage .bigPictureTwo {
+    background-image: url("../assets/images/bothmodels.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width: 1280px) {
+  .logoContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
-    height: 32px;
   }
-  .landingPageContentContainer .schedulerContainer .scheduler .scheduleNowButton {
-    height: 80%;
-    font-size: 13px;
+  .logoContainer .logo {
+    font-size: 2.5rem;
+    width: 100%;
   }
-  .landingPageContentContainer .modelsPictureContainer {
-    width: 66%;
+  .logoContainer .subLogo {
+    font-size: 1.75rem;
+  }
+
+  .navOptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    padding: 0;
+  }
+  .navOptions a {
+    text-decoration: none;
+    color: #eecdbb;
+    padding: 1rem;
+  }
+
+  .navLeft {
+    width: 30%;
+  }
+
+  .navRight {
+    width: 70%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .landingPage {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    margin: 24px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
+  }
+  .landingPage .landingPageContentContainer {
+    display: none;
+  }
+  .landingPage div {
+    height: 500px;
+    width: 30%;
+    margin: 3rem 2rem;
+    border-radius: 8px;
+  }
+  .landingPage .bigHero {
+    background-image: url("../assets/images/serenawidesmile.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .landingPage .bigSchedulerContainer {
+    background-image: url("../assets/images/serenasitting.jpg");
+    background-position: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .landingPage .bigSchedulerContainer .bigScheduler {
+    background-color: #eecdbb;
+    height: 150px;
+    width: 175px;
+    margin: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 2px 2px #572911;
+            box-shadow: 2px 2px 2px 2px #572911;
+  }
+  .landingPage .bigSchedulerContainer .bigScheduler p {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #572911;
+    font-weight: 600;
     margin: 0;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
-  .landingPageContentContainer .modelsPictureContainer .picture {
-    margin: 0;
-    height: 400px;
-    width: 180px;
+  .landingPage .bigSchedulerContainer .bigScheduler button {
+    height: 40px;
+    margin: 16px;
+    background: #572911;
+    border-radius: 20px;
+    color: #eecdbb;
+    width: 80%;
+    font-size: 1rem;
+    border: 1px solid #572911;
   }
-  .landingPageContentContainer .modelsPictureContainer .pictureOne {
-    margin: 0 16px 0 0;
+  .landingPage .bigPictureOne {
+    background-image: url("../assets/images/model1.jpg");
+    background-position: center;
+    background-size: cover;
   }
-  .landingPageContentContainer .modelsPictureContainer .pictureTwo {
-    margin-right: 32px;
-  }
-
-  .hero {
-    width: 275px;
-    height: 400px;
-    width: 180px;
-    margin: 0 16px 0 32px;
+  .landingPage .bigPictureTwo {
+    background-image: url("../assets/images/bothmodels.jpg");
+    background-position: center;
+    background-size: cover;
   }
 }/*# sourceMappingURL=App.css.map */
