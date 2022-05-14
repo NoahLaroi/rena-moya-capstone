@@ -1,4 +1,4 @@
-export default function AreYouSure () {
+function AreYouSure () {
     return (
         <div className='areYouSure'>
         <h2>Are You Sure You Want to Delete This Appointment?</h2>

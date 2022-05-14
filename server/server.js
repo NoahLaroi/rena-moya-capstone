@@ -26,7 +26,7 @@ function readTimeSlots() {
 const timeSlots = readTimeSlots();
 
 function writeApppointment(data) {
-    fs.writeFileSync("./data/appointments.json", JSON.stringify(data));
+    fs.writeFileSync("./data/appointments.json", JSON.stringify(data, space=4));
     (err) => {
       if (err) throw err;
     };

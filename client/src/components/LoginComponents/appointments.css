@@ -8,6 +8,8 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .appointmentHeading {
@@ -30,6 +32,9 @@
           box-shadow: 2px 2px 8px black;
   font-size: 16pt;
   margin: 2rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .appointmentContainer label {
   color: #268f86;
@@ -72,7 +77,7 @@
   position: absolute;
   width: 80%;
   height: 250px;
-  background-color: #144e49;
+  background-color: #092523;
   border-radius: 8px;
   -ms-flex-item-align: center;
       align-self: center;
@@ -99,8 +104,33 @@
   width: 75%;
   height: 32px;
   border-radius: 20px;
-  border-color: #144e49;
   background: #eecdbb;
   color: #144e49;
   font-size: 1.25rem;
+  border: solid 1px #092523;
+}
+.areYouSure button:hover {
+  background-color: #c0886a;
+}
+
+@media (min-width: 768px) {
+  .appointmentsSection {
+    margin: 0 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .contentContainer {
+    width: 75%;
+  }
+
+  .areYouSure {
+    width: 60%;
+  }
+  .areYouSure button {
+    height: 48px;
+    font-size: 1.5rem;
+    width: 35%;
+  }
 }/*# sourceMappingURL=appointments.css.map */

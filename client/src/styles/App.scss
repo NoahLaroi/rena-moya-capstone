@@ -5,6 +5,7 @@ $espresso: #572911;
 $white: #ffff;
 $cream: #eecdbb;
 $tourquoise: #144945;
+$darker-tourquoise: #092523;
 //Screen Sizes
 $tablet-lower: 768px;
 $tablet-higher: 1279px;
@@ -44,7 +45,7 @@ nav {
 }
 .navMenu {
   position: fixed;
-  background-color: $espresso;
+  background-color: $darker-tourquoise;
   width: 45%;
   border-radius: 8px;
   padding: 5px; box-shadow: 2px 2px 8px black; 
@@ -92,7 +93,9 @@ display: inline-flex; width: 100%;
 .hamburger:hover {
 cursor: pointer;
 }
-
+.activeMobile {
+text-decoration: underline; text-decoration-color: $cream; text-decoration-thickness: 5px;
+}
 .hero {
   background-image: url("../../public/assets/images/serenawidesmile.jpg");
   // background-attachment: fixed;
@@ -101,7 +104,7 @@ cursor: pointer;
   background-repeat: no-repeat;
   height: 350px;
   width: 100%;
-  border-radius: 8px;
+  // border-radius: 8px;
   margin: 16px 0;
   box-shadow: 2px 2px 8px $espresso;
 }
@@ -114,7 +117,7 @@ cursor: pointer;
     width: 50%; display: flex; align-content: center; align-items: center; justify-content: center;  margin-right: 16px ;
   }
   .scheduler {
-    border-radius: 8px;
+    // border-radius: 8px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 16pt;font-weight: 600;
     background-color: $cream; height: 200px; width: 100%; display: flex; 
     flex-flow: column wrap; justify-content: center; align-items: center; box-shadow: 2px 2px 8px $espresso;
@@ -127,11 +130,14 @@ cursor: pointer;
   button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: $cream; 
     background-color: $espresso;
-    border-radius: 20px; width: 80%; border: $espresso; 
+    border-radius: 32px; width: 80%; border: $espresso; 
     padding: 5px 8px; font-size: 14pt; 
     font-weight: 400;
   }
   }
+}
+.bigScheduler {
+  display: none;
 }
 .scheduleNowButton:hover {
   transform: scale(110%); transition-duration: 1.5s; color: $white; 
@@ -145,7 +151,7 @@ height: 400px; width: 50%; display: flex;
 flex-flow: column nowrap; align-items: flex-end; 
 margin: 0; 
 .picture {
-border-radius: 8px; box-shadow: 2px 2px 8px $espresso; height: 200px; width: 100%; background-position: center; 
+box-shadow: 2px 2px 8px $espresso; height: 200px; width: 100%; background-position: center; 
 background-size: cover; background-repeat: no-repeat; margin: 0 0 16px 0;
 }
 .pictureOne {
@@ -187,8 +193,8 @@ display: flex; width: 100%;
 }
 //Tablet Styling
 @media (min-width: $tablet-lower) {
-  .hamburger {
-    display: none;
+  .active {
+    border-left: 5px solid $cream;
   }
   .hero {
     display: none;
@@ -208,6 +214,11 @@ display: flex; width: 100%;
 .hero {
   display: none;
 }
+.navMenu {
+  .listElement {
+    font-size: 1.5rem;
+  }
+}
 //Big Landing Page Styling
 .landingPage {
   display: inline-flex; flex-flow: row nowrap; margin: 24px 0; justify-content: center;
@@ -216,7 +227,7 @@ display: flex; width: 100%;
     display: none;
   }
   div {
-    height: 500px; width: 30%; margin: 1rem; border-radius: 8px;
+    height: 500px; width: 30%; margin: 1rem;
   }
   .bigHero {
   background-image: url('../assets/images/serenawidesmile.jpg'); background-position: center; background-size: cover;
@@ -225,7 +236,7 @@ display: flex; width: 100%;
     background-image: url('../assets/images/serenasitting.jpg'); background-position: center; background-size: cover;
     display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
     .bigScheduler {
-      background-color: $cream; height: 100px; width: 120px; margin: 32px; display: flex; flex-flow: column wrap; align-items: center; justify-content: center;
+      background-color: $cream; height: 100px; width: 120px; margin: 1.5rem; display: flex; flex-flow: column wrap; align-items: center; justify-content: center;
       text-align: center; box-shadow: 2px 2px 2px 2px $espresso; 
       p {
         display: inline-block; font-size: 1rem; color: $espresso; font-weight: 600; margin: 0;
@@ -242,8 +253,17 @@ display: flex; width: 100%;
     background-image: url('../assets/images/bothmodels.jpg'); background-position: center; background-size: cover;
   }
 }
+.pageFooter {
+ p {
+   font-size: 1.5rem;
+ }
+}
 }
 @media (min-width: 1280px) {
+
+  .hamburger {
+    display: none;
+  }
 .logoContainer {
   justify-content: center; width: 100%;
   .logo {
@@ -258,7 +278,11 @@ display: flex; width: 100%;
 a {
   text-decoration: none; color: $cream; padding: 1rem; 
 }
+a:hover {
+  color: white;
 }
+}
+
 .navLeft {
   width: 30%;
 }
@@ -272,7 +296,7 @@ a {
     display: none;
   }
   div {
-    height: 500px; width: 30%; margin: 3rem 2rem; border-radius: 8px;
+    height: 500px; width: 30%; margin: 3rem 2rem;
   }
   .bigHero {
   background-image: url('../assets/images/serenawidesmile.jpg'); background-position: center; background-size: cover;

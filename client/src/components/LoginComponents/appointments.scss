@@ -5,18 +5,20 @@ $coffee: #803208;
 $espresso: #572911;
 $white: #ffff;
 $cream: #eecdbb;
+$dark-cream: #c0886a;
 $tourquoise: #268f86;
 $dark-tourquoise: #144e49;
+$darker-tourquoise: #092523;
 
 .appointmentsSection {
-    margin: 16px; display: flex; flex-flow: column wrap;
+    margin: 16px; display: flex; flex-flow: column wrap; align-content: center;
 }
 .appointmentHeading {
 font-size: 24pt; color: $cream;
 }
 .appointmentContainer {
     background-color: $white; width: 100%; border-radius: 8px; display: inline-flex; 
-    flex-flow: column wrap; box-shadow: 2px 2px 8px black; font-size: 16pt; margin: 2rem 0;
+    flex-flow: column wrap; box-shadow: 2px 2px 8px black; font-size: 16pt; margin: 2rem 0; justify-content: center;
     label {
         color: $tourquoise;
     }
@@ -37,13 +39,30 @@ font-size: 24pt; color: $cream;
 }
 // Are You Sure Component
 .areYouSure {
-    position: absolute; width: 80%; height: 250px;background-color: $dark-tourquoise; border-radius: 8px; align-self: center; 
+    position: absolute; width: 80%; height: 250px;background-color: $darker-tourquoise; border-radius: 8px; align-self: center; 
     display: flex; flex-flow: column wrap; text-align: center; align-items: center; justify-self: center; margin: 16px;
     h2 {
         font-size: 1.5rem; color: $white;
     }
     button {
-    margin: 8px; width: 75%; height: 32px; border-radius: 20px; border-color: $dark-tourquoise; background: $cream; color: $dark-tourquoise;
-    font-size: 1.25rem;
+    margin: 8px; width: 75%; height: 32px; border-radius: 20px; background: $cream; color: $dark-tourquoise;
+    font-size: 1.25rem; border: solid 1px $darker-tourquoise;
     }
+    button:hover {
+        background-color:$dark-cream;
+    }
+}
+@media (min-width: 768px) {
+.appointmentsSection {
+    margin: 0 2rem; align-items: center;
+}
+.contentContainer {
+    width: 75%;
+}
+.areYouSure {
+    width: 60%;
+    button {
+        height: 48px; font-size: 1.5rem; width: 35%; 
+    }
+}
 }

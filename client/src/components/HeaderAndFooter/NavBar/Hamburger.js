@@ -1,5 +1,5 @@
 import {React, Component} from "react"
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default class Hamburger extends Component {
    state = {
@@ -12,12 +12,12 @@ export default class Hamburger extends Component {
     render () {
     const navElements = 
     <div className="navElements">
-        <ul className="navMenu" name='navMenu'>
-          <Link to='/aboutme' onClick={()=> {this.setState({invisible: true})}}><li className="listElement about">About Me</li></Link>
-          <a href='https://www.instagram.com/renamoyahairstudio/' onClick={()=> {this.setState({invisible: true})}}><li className="listElement gallery">Gallery</li></a>
-          <Link to='/policies' onClick={()=> {this.setState({invisible: true})}}><li className='listElement policies'> Policies</li></Link>
-          <Link to='/schedule' onClick={()=> {this.setState({invisible: true})}}><li className="listElement schedule">Schedule</li></Link>
-          <Link to='/admin-login' onClick={()=> {this.setState({invisible: true})}}><li className='listElement adminLogin'>Admin Login</li></Link>
+         <ul className="navMenu" name='navMenu'>
+          <NavLink activeClassName='activeMobile' to='/aboutme' onClick={()=> {this.setState({invisible: true})}}><li className="listElement about">About Me</li></NavLink>
+          <NavLink activeClassName='activeMobile' to='/gallery' onClick={()=> {this.setState({invisible: true})}}><li className="listElement gallery">Gallery</li></NavLink>
+          <NavLink activeClassName='activeMobile' to='/policies' onClick={()=> {this.setState({invisible: true})}}><li className='listElement policies'> Policies</li></NavLink>
+          <NavLink activeClassName='activeMobile' to='/schedule' onClick={()=> {this.setState({invisible: true})}}><li className="listElement schedule">Schedule</li></NavLink>
+          <NavLink activeClassName='activeMobile' to='/admin-login'onClick={()=> {this.setState({invisible: true})}}><li className='listElement adminLogin'>Admin Login</li></NavLink>
         </ul>
       </div>;
     

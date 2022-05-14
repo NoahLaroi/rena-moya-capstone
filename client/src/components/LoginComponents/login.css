@@ -59,71 +59,25 @@
   border: #144e49;
 }
 
-.appointmentsSection {
-  margin: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-}
-
-.appointmentHeading {
-  font-size: 24pt;
-  color: #eecdbb;
-}
-
-.appointmentContainer {
-  background-color: white;
-  width: 100%;
-  border-radius: 8px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-shadow: 2px 2px 8px black;
-          box-shadow: 2px 2px 8px black;
-  font-size: 16pt;
-  margin: 2rem 0;
-}
-.appointmentContainer label {
-  color: black;
-}
-.appointmentContainer p {
-  color: #268f86;
-  padding-left: 16px;
-  margin: 0;
-}
-.appointmentContainer .cancelButton {
-  background-color: #268f86;
-  height: 40px;
-  color: white;
-  border-radius: 8px;
-  border: solid #268f86 1px;
-  width: 50%;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin: 16px;
-  text-align: center;
-  font-size: 16pt;
-}
-.appointmentContainer .cancelButton:hover {
-  background-color: #144e49;
-  color: #eecdbb;
-  border-color: #144e49;
-}
-
-.calendarDate {
-  border-radius: 8px;
-  height: 32px;
-  margin: 0 0 16px 0;
-  font-size: 16pt;
-  padding: 5px;
-  border: #144e49;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+@media (min-width: 768px) {
+  .loginSection {
+    width: 50%;
+    margin: 2rem auto;
+  }
+  .loginSection h1 {
+    font-size: 2.5rem;
+  }
+  .loginSection label {
+    font-size: 2rem;
+  }
+  .loginSection input {
+    height: 56px;
+    font-size: 2rem;
+  }
+  .loginSection .loginButton {
+    height: 56px;
+    width: 160px;
+    font-size: 2rem;
+    border-radius: 32px;
+  }
 }/*# sourceMappingURL=login.css.map */

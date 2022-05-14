@@ -36,9 +36,9 @@ export default function Policies () {
                 <li>If you have to reschedule, you must do so <b>48
                 hours before your appointment</b> to kkep the same deposit.
                 </li>
+                <li>NO SHOW = BANNED</li>
+                <li>I DO NOT PROVIDE THE BRAIDING HAIR</li>
             </ul>
-            <li>NO SHOW = BANNED</li>
-            <p>I DO NOT PROVIDE THE BRAIDING HAIR</p>
             <h3>HOW TO BOOK</h3>
             <li>Please use the <Link to='/schedule'>Scheduling Page</Link>, 
             DM me through <a href='https://www.instagram.com/renamoyahairstudio'>Instagram</a>,
@@ -52,7 +52,7 @@ export default function Policies () {
             </p>
             </div>
             <div className='policyLogoContainer'>
-            <img href={logo}/>
+            {/* <img href={logo}/> */}
             </div>
         </section>
     )

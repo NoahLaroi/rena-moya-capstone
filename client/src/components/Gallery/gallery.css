@@ -1,4 +1,8 @@
 @import url("../../styles/App.scss");
+.active {
+  border-bottom: 2px #eecdbb;
+}
+
 .gallerySection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,6 +16,78 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 800px;
-  margin: 16px;
+  margin: 1.5rem;
+}
+.gallerySection h1 {
+  color: #eecdbb;
+  font-size: 2rem;
+}
+
+.hairPhoto {
+  height: 500px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 2rem 0;
+  -webkit-box-shadow: 8px 5px 3px #092523;
+          box-shadow: 8px 5px 3px #092523;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.styleDescription {
+  background-color: white;
+  height: 10%;
+  color: #144e49;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.styleDescription h2 {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .hairPhoto {
+    height: 800px;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .styleDescription {
+    background-color: white;
+    height: 10%;
+    color: #144e49;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .styleDescription h2 {
+    margin-left: 2rem;
+    font-size: 1.75rem;
+  }
 }/*# sourceMappingURL=gallery.css.map */

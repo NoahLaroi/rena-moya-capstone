@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './appointments.scss'
-import AreYouSure from './AreYouSure'
+import AppointmentData from './AppointmentData'
+// import AreYouSure from './AreYouSure'
 const URL = 'http://localhost:8080/appointments'
 // Three Steps: 
 //1. Set up a json of days on the backed with a timeslot for each day and an available object
@@ -14,14 +15,10 @@ export default class Appointments extends Component {
         currentDate: new Date().toISOString().split('T')[0],
         todaysAppointments: [],
         allAppointments: [],
-        invisible: true,
-        makePromptVisible: () => {
-            this.setState({invisible: !this.state.invisible})
-          } 
     }
 
     componentDidMount() {
-        axios.get(URL)
+        axios.get('http://localhost:8080/appointments/')
         .then((response) => {
         // We get back a list of appointments here.
         const today = response.data.filter((appointments) =>
@@ -62,30 +59,20 @@ export default class Appointments extends Component {
     })
     // console.log('text updated')
     }
+   
 
-    deleteAppointment =(id)=> {
-    axios
-      .delete('http://localhost:8080/appointments/' + id)
-      .then((success) => {
-        this.renderAppointments();
-      })
-      .catch((error) => console.log(error));
-    }
     render() {
-
-    const areYouSure =(appointment)=> { 
-    return (
-    <div className='areYouSure'>
-    <h2>Are You Sure You Want to Cancel This Appointment?</h2>
-    <button className='yesButton' 
-    // id={appointment.id} 
-    onClick={(event)=>{this.deleteAppointment(event.target.id)}}
-    >Yes</button>
-    <button onClick={()=> this.setState({invisible: true})} className='noButton'>No</button>
-    </div>
-    )
-    }
-        // console.log(this.state.currentDate)
+        const areYouSure =  
+        <div className='areYouSure'>
+        <h2>Are You Sure You Want to Cancel This Appointment?</h2>
+        <button className='yesButton' 
+        // id={appointment.id} 
+        onClick={(event)=>{this.deleteAppointment(event.target.id)}}
+        >Yes</button>
+        <button onClick={()=> this.setState({invisible: true})} className='noButton'>No</button>
+        </div>
+        //console.log(this.state.todaysAppointments)
+        //console.log(this.state.makePopUpVisible)
         return (
             <section className='appointmentsSection'>
             <h1 className='appointmentHeading'>Here are your appointments for: {this.state.currentDate}</h1>
@@ -93,26 +80,12 @@ export default class Appointments extends Component {
             {/* Map through the array of appointments in state and display it here */}
             <section className='contentContainer'>
             {this.state.todaysAppointments.map((appointment) => {
-                console.log(appointment.id)
-                return <div className='appointmentContainer'
-                id={appointment.id} >
-                <label>Customer</label>
-                <p>{appointment.name}</p> 
-                <label>Customer ID</label>
-                <p>{appointment.id}</p>
-                <label>Phone Number</label>
-                <p>{appointment.phone}</p>
-                <label>Date</label>
-                <p>{appointment.date}</p>
-                <label>Time</label>
-                <p>{appointment.time}</p>
-                <label>Description</label>
-                <p>{appointment.description}</p>
-                <button className='cancelButton' 
-                onClick={()=>this.state.makePromptVisible()}
-                >Cancel</button>
-                {!this.state.invisible ? areYouSure() : null}
-                </div>
+                return <AppointmentData 
+                appointment={appointment} 
+                makePopUpVisible={this.state.makePopUpVisible}
+                makePopUpInvisible={this.state.makePopUpInvisible}
+                key={appointment.id}
+                />
             })}
             </section>
             </section>
