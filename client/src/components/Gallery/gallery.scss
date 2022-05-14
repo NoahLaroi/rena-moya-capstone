@@ -38,6 +38,9 @@ h1 {
      display: flex;
     flex-flow: column wrap; justify-content: flex-end;
     }
+    blockquote {
+        width: 50%;
+    }
     .styleDescription {
         background-color: white; height: 10%; color: $dark-tourquoise; display: flex; align-content: center;
       
