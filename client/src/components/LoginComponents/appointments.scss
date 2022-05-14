@@ -56,8 +56,12 @@ font-size: 24pt; color: $cream;
 .appointmentsSection {
     margin: 0 2rem; align-items: center;
 }
+
 .contentContainer {
     width: 75%;
+    p {
+        font-size: 1.5rem;
+    }
 }
 .areYouSure {
     width: 60%;

@@ -124,6 +124,9 @@
   .contentContainer {
     width: 75%;
   }
+  .contentContainer p {
+    font-size: 1.5rem;
+  }
 
   .areYouSure {
     width: 60%;

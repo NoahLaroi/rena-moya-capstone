@@ -103,7 +103,7 @@ export default class SchedulePage extends Component {
     render() {
       const {name, phone, date, time, description, errors} = this.state
       
-      console.log(this.state.timeSlots)
+      // console.log(this.state.timeSlots)
       const timesList = <ul className='timesList'>
       {this.state.timeSlots.map((time)=> {
       return <li  onClick={(event)=>{
@@ -112,7 +112,7 @@ export default class SchedulePage extends Component {
         }} value={time}>{time}</li>
     })}
     </ul>
-    console.log(this.state.time)
+    // console.log(this.state.time)
         return (
             <section className='schedulePage'>
                 <section className='scheduleSection'>
