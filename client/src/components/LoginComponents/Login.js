@@ -3,7 +3,9 @@ import axios from 'axios'
 import './login.scss'
 export default class Login extends Component {
     state = {
-        superSuperSecret: 'tsa%A6@-hU',
+        superSuperSecret: 
+        //'tsa%A6@-hU',
+        '123456',
         isLoggedIn: false,
         isLoginError: false,
         errorMessage: "",
