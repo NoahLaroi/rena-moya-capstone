@@ -78,7 +78,7 @@ export default class SchedulePage extends Component {
       
       if (isValid) { 
         setTimeout(
-          () => alert(`Thank you ${this.state.name}! Your appointment has been scheduled for ${this.state.date} at ${this.state.time}!`),
+          () => alert(`Thank you ${this.state.name}! Your appointment for ${this.state.date} at ${this.state.time}! has been sent in for review. We will get back to you to confirm our availability via text message.`),
           500
         );
         axios.post('http://localhost:8080/appointments', {
@@ -108,7 +108,7 @@ export default class SchedulePage extends Component {
       {this.state.timeSlots.map((time)=> {
       return <li  onClick={(event)=>{
         console.log(event.target.innerHTML)
-        this.setState({time: event.target.innerHTML})
+        this.setState({time: event.target.innerHTML, invisible: true})
         }} value={time}>{time}</li>
     })}
     </ul>

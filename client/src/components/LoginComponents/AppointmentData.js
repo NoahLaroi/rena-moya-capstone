@@ -1,5 +1,6 @@
 import { Component } from "react";
 import axios from "axios";
+import './appointments.scss'
 export default class AppointmentData extends Component {
   
     state = {
@@ -58,7 +59,7 @@ export default class AppointmentData extends Component {
         <label>Time</label>
         <p>{appointment.time}</p>
         <label>Description</label>
-        <p>{appointment.description}</p>
+        <p className='appointmentDescription'>{appointment.description}</p>
         <button
           className="cancelButton"
           id={appointment.id}
@@ -68,6 +69,9 @@ export default class AppointmentData extends Component {
               this.state.makePopUpVisible(event.target.id)}}
         >
           Cancel
+        </button>
+        <button className='editButton'>
+          Edit
         </button>
         {!this.state.invisible ? areYouSure : null}
       </div>
